@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+
+:root {
+    --HeavyText: rgb(0, 0, 0);
+    --LightText: rgb(20, 20, 20);
+    --HeaderTitle: rgb(216, 216, 216);
+    --Shadow: rgba(155, 152, 144, 0.8);
+    --Background: rgb(218, 225, 232);
+    --BackgroundSmoothPanel: rgb(216, 10, 233);
+    --BackgroundPanel: rgb(255, 255, 255);
+    --FirstDescripPanel: rgb(254, 248, 162);
+    --SecondDescripPanel: rgb(240, 190, 225);
+    --ThirdDescripPanel: rgb(252, 200, 170);
+    --FourthDescripPanel: rgb(200, 248, 245);
+    --BackgroundFooter: rgb(165, 121, 242);
+
+    --Weight-HeavyText: 700;
+    --Weight-BoldText: 500;
+    --Weight-LightText: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 99vh;
+}
+
+body {
+    background-color: var(--Background);
+    font-family: 'Ubuntu', 'Times New Roman', Times, serif;
+    font-weight: var(--Weight-LightText);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 75vh;
+    padding: 0.5rem;
+    background-color: var(--BackgroundSmoothPanel);
+    box-shadow: 0 0 20px var(--Shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-panel-container {
+    background-color: var(--BackgroundPanel);
+}
+
+.title-container {
+    background-color: var(--HeaderTitle);
+    padding: 0.55rem;
+    display: block;
+    text-align: center;
+}
+
+.title, .definition h2 {
+    margin: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: var(--Weight-HeavyText);
+}
+
+.elements-container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    row-gap: 0.2rem;
+}
+
+.elements-container div {
+    margin: 0.8rem 0.5rem 0;
+    display: block;
+    text-align: center;
+}
+
+.definition {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-element-container .definition {
+    margin: 0 auto;
+    background-color: var(--FirstDescripPanel);
+}
+
+.second-element-container .definition {
+    margin: 0 auto;
+    background-color: var(--SecondDescripPanel);
+}
+
+.third-element-container .definition {
+    margin: 0 auto;
+    background-color: var(--ThirdDescripPanel);
+}
+
+.fourth-element-container .definition {
+    margin: 0 auto;
+    background-color: var(--FourthDescripPanel);
+}
+
+.definition-name {
+    margin: 0.2rem;
+}
+
+.description {
+    margin: 0.1rem;
+    font-size: 0.88rem;
+}
+
+.bold {
+    font-weight: var(--Weight-BoldText);
+}
+
+.footer-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.footer-description {
+    background-color: var(--BackgroundFooter);
+    color: var(--BackgroundPanel);
+    font-weight: var(--Weight-LightText);
+    margin: 0.1rem 0 0;
+    padding: 0.2rem;
+}
